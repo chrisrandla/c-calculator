@@ -26,7 +26,11 @@ float x, y;
 		printf("%.2f * %.2f = %.2f\n", x, y, multiply(x, y));
 		break;
 	case '/':
-		printf("%.2f / %.2f = %.2f\n", x, y, divide(x, y));
+		if (y != 0) {
+			printf("%.2f / %.2f = %.2f\n", x, y, divide(x, y));
+		}
+		else {
+			printf("Error: Division by zero is not allowed.\n");
 	default:
 		printf("Error: Invalid operator.\n");
 	}
